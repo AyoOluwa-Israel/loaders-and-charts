@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BarCharts from './component/BarCharts';
+import Loader from './component/Loaders';
+import LineCharts from './component/LineCharts';
+import DoughnutCharts from './component/PieChart';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Loader/>
+      <div className="charts">
+        <LineCharts/>
+        <BarCharts/>
+        <DoughnutCharts className="App-logo"/>
+      </div> 
     </div>
   );
 }
